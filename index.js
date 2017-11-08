@@ -23,12 +23,9 @@ var result = lego.query(
     lego.sortBy('age', 'asc'), // Бывает только asc (от меньшего к большему) или desc (наоборот)
     //
     // А пол выведем только первой буквой для удобства
-    lego.format(function (el) {
-        return Object.assign(el, {gender: el.gender[0]});
+    lego.format('gender', function (value) {
+        return value[0];
     }),
-    // lego.format('gender', function (value) {
-    //     return value[0];
-    // }),
     //
     //На дачу влезет примерно 10 человек
     lego.limit(10)

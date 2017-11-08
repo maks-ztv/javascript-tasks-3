@@ -56,9 +56,13 @@ module.exports.sortBy = function (key, order) {
 };
 
 //Format function
-module.exports.format = function (f) {
+module.exports.format = function (field, func) {
     return function (array) {
-        return array.map(f);
+        var moddedArray = array.map(function (el) {
+            el[field] = func(el[field]);
+            return el;
+        });
+        return moddedArray;
     };
 };
 
