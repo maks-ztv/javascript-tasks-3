@@ -1,5 +1,5 @@
-'use strict';
-
+// 'use strict';
+//
 // Подключаем нашу телефоную книгу друзей
 var phoneBook = require('./phoneBook');
 
@@ -32,7 +32,7 @@ var result = lego.query(
 
 // Будет круто организовать две вечеринки сразу: яблочную для девушек и картофельную для парней.
 
-var result = lego.query(
+/*var result = lego.query(
     phoneBook,
 
     // Выбираем всех парней, которые любят картофель, и всех девушек, которые любят яблоки
@@ -46,4 +46,5 @@ var result = lego.query(
             lego.filterIn('favoriteFruit', ['Яблоко'])
         )
     )
-);
+);*/
+
