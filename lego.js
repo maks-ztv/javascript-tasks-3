@@ -58,11 +58,10 @@ module.exports.sortBy = function (key, order) {
 //Format function
 module.exports.format = function (field, func) {
     return function (array) {
-        var moddedArray = array.map(function (el) {
+        return array.map(function (el) {
             el[field] = func(el[field]);
             return el;
         });
-        return moddedArray;
     };
 };
 
